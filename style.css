@@ -78,7 +78,7 @@ p{ margin:0 0 1.1em; }
   display:inline-flex; align-items:center; gap:.5rem;
   min-height:48px; padding:.8rem 1.6rem;
   border-radius:999px; border:1px solid transparent;
-  font-weight:600; font-size:1rem; cursor:pointer;
+  font-weight:600; font-size:1rem; cursor:pointer; white-space:nowrap;
   transition:transform .15s ease, background .2s ease, color .2s ease, border-color .2s ease;
 }
 .btn--gold{ background:var(--gold); color:var(--navy-deep); }
@@ -129,7 +129,7 @@ p{ margin:0 0 1.1em; }
   box-shadow:var(--shadow-lg);
 }
 .nav.is-open{ display:flex; }
-.nav a{
+.nav a:not(.btn){
   color:#fff; padding:.85rem .25rem; font-weight:500;
   border-bottom:1px solid rgba(255,255,255,.08);
 }
@@ -142,7 +142,7 @@ p{ margin:0 0 1.1em; }
     display:flex; position:static; flex-direction:row; align-items:center;
     gap:1.8rem; background:none; padding:0; box-shadow:none;
   }
-  .nav a{ color:var(--navy); border:none; padding:.3rem 0; position:relative; }
+  .nav a:not(.btn){ color:var(--navy); border:none; padding:.3rem 0; position:relative; }
   .nav a:not(.btn):hover{ color:var(--gold); }
   .nav a.is-active:not(.btn)::after{
     content:""; position:absolute; left:0; right:0; bottom:-4px;
@@ -150,8 +150,8 @@ p{ margin:0 0 1.1em; }
   }
   .nav__phone{
     margin-top:0;
-    min-height:40px; padding:.5rem 1.25rem;
-    font-size:.95rem; letter-spacing:.01em;
+    min-height:44px; padding:.6rem 1.9rem;
+    font-size:1rem; letter-spacing:.02em;
     box-shadow:0 6px 16px rgba(200,162,76,.28);
   }
   .nav a.is-active.nav__phone::after{ content:none; }
